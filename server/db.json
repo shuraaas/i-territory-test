@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "users": [
+    {
+      "email": "qwe@mail.ru",
+      "password": "$2a$10$71iMNQ5uvOtJyWqDzUUV4ulcopZPn8xhqEGufyUPtCNui84BDBkV2",
+      "id": 1
+    },
+    {
+      "email": "qwe1@mail.ru",
+      "password": "$2a$10$1PSVbcFRmjtCYL7DPLp..OU5uhx8F0/AQFJjLCah/oBFhYWChPtBa",
+      "id": 2
+    },
+    {
+      "email": "qwe2@mail.ru",
+      "password": "$2a$10$Onq5ueXvjSaRtcnOB44pHeWZXRQ8vpclNY49INdjV4BicUNm6zYQ2",
+      "id": 3
+    }
+  ]
+}
