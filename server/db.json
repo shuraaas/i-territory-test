@@ -1,16 +1,5 @@
 {
-  "users": [
-    {
-      "email": "qwe@mail.ru",
-      "password": "$2a$10$aEkY6j0MHheOkf9zgP2Urepf77nYRJZD0MS8.h2./ynBVYekUxMwW",
-      "id": 1
-    },
-    {
-      "email": "qwe1@mail.ru",
-      "password": "$2a$10$KmvkPQ76.ZSkN7GCNUwaIOmQ83XGuk02IMG3J50uy3szjrR.b85tO",
-      "id": 2
-    }
-  ],
+  "users": [],
   "descendant": {
     "id": 1,
     "name": "Екатерина Смирнова",
