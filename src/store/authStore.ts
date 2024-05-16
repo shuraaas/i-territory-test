@@ -32,7 +32,7 @@ export const useAuthStore = create<AuthStoreState>((set, get) => ({
   login: user => set({ user, isAuth: true }),
   checkAuth: async () => {
     try {
-      await axios.get('http://localhost:3000/posts', {
+      await axios.get('http://localhost:3000/descendant', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       get()._authenticate();
