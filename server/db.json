@@ -19,13 +19,102 @@
     },
     {
       "email": "qwe1@mail.ru",
-      "password": "$2a$10$1PSVbcFRmjtCYL7DPLp..OU5uhx8F0/AQFJjLCah/oBFhYWChPtBa",
+      "password": "$2a$10$C59T3Tsj4Cofs.76WmJm0eepkYTlU.pCGMULAItNV5Of6BjJnJq0a",
       "id": 2
     },
     {
       "email": "qwe2@mail.ru",
-      "password": "$2a$10$Onq5ueXvjSaRtcnOB44pHeWZXRQ8vpclNY49INdjV4BicUNm6zYQ2",
+      "password": "$2a$10$CzBjx8arLr7v3zy.tnt6CeyxJhwVlaPC6xBZWZ.9u2sseTdYmupCm",
       "id": 3
     }
-  ]
+  ],
+  "descendant": {
+    "id": 1,
+    "name": "Екатерина Смирнова",
+    "birthDate": "2010",
+    "parents": [
+      {
+        "id": 2,
+        "name": "Ольга Иванова",
+        "birthDate": "1980",
+        "parents": [
+          {
+            "id": 4,
+            "name": "Иван Петров",
+            "birthDate": "1950",
+            "parents": [
+              {
+                "id": 8,
+                "name": "Петр Сергеев",
+                "birthDate": "1920"
+              },
+              {
+                "id": 9,
+                "name": "Нина Сергеева",
+                "birthDate": "1925"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "name": "Мария Иванова",
+            "birthDate": "1952",
+            "parents": [
+              {
+                "id": 10,
+                "name": "Иван Кузнецов",
+                "birthDate": "1922"
+              },
+              {
+                "id": 11,
+                "name": "Людмила Кузнецова",
+                "birthDate": "1927"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Сергей Смирнов",
+        "birthDate": "1979",
+        "parents": [
+          {
+            "id": 6,
+            "name": "Николай Смирнов",
+            "birthDate": "1955",
+            "parents": [
+              {
+                "id": 12,
+                "name": "Алексей Смирнов",
+                "birthDate": "1930"
+              },
+              {
+                "id": 13,
+                "name": "Елена Смирнова",
+                "birthDate": "1933"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "name": "Людмила Смирнова",
+            "birthDate": "1957",
+            "parents": [
+              {
+                "id": 14,
+                "name": "Петр Николаев",
+                "birthDate": "1932"
+              },
+              {
+                "id": 15,
+                "name": "Татьяна Николаева",
+                "birthDate": "1934"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

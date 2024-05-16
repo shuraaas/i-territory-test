@@ -1,0 +1,26 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+
+  .wrap {
+    display: flex;
+    gap: 10px;
+  }
+
+  .name {
+    margin: 0;
+  }
+}
+
+.parents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
+}

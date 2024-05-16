@@ -1,7 +1,21 @@
 import { create } from 'zustand';
 import axios from 'axios';
 
-export const useStore = create((set, get) => ({
+interface AuthStoreState {
+  isAuth: boolean;
+  isInit: boolean;
+  user: {
+    id: number | null;
+    email: string;
+  };
+  _authenticate: () => void;
+  logout: () => void;
+  login: (user: { id: number | null; email: string }) => void;
+  checkAuth: () => void;
+  setIsInit: (init: boolean) => void;
+}
+
+export const useAuthStore = create<AuthStoreState>((set, get) => ({
   isAuth: false,
   isInit: false,
   user: {
@@ -18,10 +32,9 @@ export const useStore = create((set, get) => ({
   login: user => set({ user, isAuth: true }),
   checkAuth: async () => {
     try {
-      const response = await axios.get('http://localhost:3000/posts', {
+      await axios.get('http://localhost:3000/posts', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
-      console.log(response);
       get()._authenticate();
     } catch (e) {
       get().logout();

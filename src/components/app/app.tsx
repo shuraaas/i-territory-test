@@ -5,30 +5,32 @@ import {
   Navigate,
 } from 'react-router-dom';
 
+import { Home } from '../../pages/home-page';
 import { LoginPage } from '../../pages/login-page';
 import { RegisterPage } from '../../pages/register-page';
-import { useStore } from '../../store/store';
+
+import { useAuthStore } from '../../store/authStore';
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
-  const isAuth = useStore(store => store.isAuth);
+  const isAuth = useAuthStore(store => store.isAuth);
   return isAuth ? children : <Navigate to="/" />;
 };
 
 const privateRoute = (el: ReactElement) => <PrivateRoute>{el}</PrivateRoute>;
 
 const router = createBrowserRouter([
-  { path: '/', element: privateRoute(<p>app</p>) },
+  { path: '/', element: privateRoute(<Home />) },
   { path: '/login', element: <LoginPage /> },
   { path: '/register', element: <RegisterPage /> },
   { path: '*', element: <h3>Такой страницы не существует</h3> },
 ]);
 
 export const App = () => {
-  const [isInit, setIsInit] = useStore(store => [
+  const [isInit, setIsInit] = useAuthStore(store => [
     store.isInit,
     store.setIsInit,
   ]);
-  const checkAuth = useStore(store => store.checkAuth);
+  const checkAuth = useAuthStore(store => store.checkAuth);
 
   useEffect(() => {
     if (isInit) return;

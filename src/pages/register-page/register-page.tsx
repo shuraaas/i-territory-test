@@ -4,14 +4,16 @@ import { Button, Form, Input, Space } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
-import { useStore } from '../../store/store';
+import { useAuthStore } from '../../store/authStore';
 
 import styles from './register-page.module.scss';
 
-export const RegisterPage = () => {
+interface RegisterPageProps extends React.ComponentProps<'div'> {}
+
+export const RegisterPage: React.FC<RegisterPageProps> = () => {
   const [error, setError] = useState<null | string>(null);
   const [data, setData] = useState({ email: '', password: '' });
-  const login = useStore(state => state.login);
+  const login = useAuthStore(state => state.login);
 
   const navigate = useNavigate();
 
@@ -30,12 +32,12 @@ export const RegisterPage = () => {
       login(response.data.user);
 
       navigate('/');
-    } catch (error) {
+    } catch (error: any) {
       setError(error.response.data);
     }
   };
 
-  const onFinishFailed = error => {
+  const onFinishFailed = (error: any) => {
     console.log('onFinishFailed: ', error);
   };
 

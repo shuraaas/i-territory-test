@@ -1,0 +1,16 @@
+.home {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    margin: 0;
+  }
+}

@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Form, Input, Space } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import axios from 'axios';
 
-import { useStore } from '../../store/store';
+import { useAuthStore } from '../../store/authStore';
 
 import styles from './login-page.module.scss';
 
-export const LoginPage = () => {
+interface LoginPageProps extends React.ComponentProps<'div'> {}
+
+export const LoginPage: React.FC<LoginPageProps> = () => {
   const [error, setError] = useState<null | string>(null);
   const [data, setData] = useState({ email: '', password: '' });
-  const login = useStore(state => state.login);
+  const login = useAuthStore(state => state.login);
 
   const navigate = useNavigate();
 
@@ -28,12 +29,12 @@ export const LoginPage = () => {
       login(response.data.user);
 
       navigate('/');
-    } catch (error) {
+    } catch (error: any) {
       setError(error.response.data);
     }
   };
 
-  const onFinishFailed = error => {
+  const onFinishFailed = (error: any) => {
     console.log('onFinishFailed: ', error);
   };
 
