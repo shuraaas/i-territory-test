@@ -11,23 +11,7 @@
       "views": 200
     }
   ],
-  "users": [
-    {
-      "email": "qwe@mail.ru",
-      "password": "$2a$10$71iMNQ5uvOtJyWqDzUUV4ulcopZPn8xhqEGufyUPtCNui84BDBkV2",
-      "id": 1
-    },
-    {
-      "email": "qwe1@mail.ru",
-      "password": "$2a$10$C59T3Tsj4Cofs.76WmJm0eepkYTlU.pCGMULAItNV5Of6BjJnJq0a",
-      "id": 2
-    },
-    {
-      "email": "qwe2@mail.ru",
-      "password": "$2a$10$CzBjx8arLr7v3zy.tnt6CeyxJhwVlaPC6xBZWZ.9u2sseTdYmupCm",
-      "id": 3
-    }
-  ],
+  "users": [],
   "descendant": {
     "id": 1,
     "name": "Екатерина Смирнова",
