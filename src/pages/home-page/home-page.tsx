@@ -16,7 +16,9 @@ export const Home: React.FC<HomeProps> = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/descendant');
+        const response = await axios.get('http://localhost:3000/descendant', {
+          headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+        });
         setFamilyTree(response.data);
       } catch (error: any) {
         console.log(error);
